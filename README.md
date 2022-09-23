@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Assets/TippingCalImg.pdf)
+![Tipping-Cal-Img.png](https://postimg.cc/zHGxj3c6)
 
 ### Links
 
