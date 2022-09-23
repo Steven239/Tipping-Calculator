@@ -30,7 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Tipping-Cal-Img.png](https://postimg.cc/zHGxj3c6)
+![Tipping-Cal-Img.png](https://ibb.co/0ZB1rGF)
+
 
 ### Links
 
