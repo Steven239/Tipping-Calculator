@@ -1,0 +1,200 @@
+html {
+  background-color: rgb(196, 228, 231);
+}
+
+@media screen and (min-width: 1769px) {
+  .card-body {
+    width: 50% !important;
+  }
+}
+
+.logo-container {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card-body {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+label {
+  font-family: monospace;
+  font-size: 20px;
+  color: rgba(0, 73, 77, 0.67);
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 24px;
+  color: white;
+  font-family: monospace;
+}
+
+.bill-input {
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  padding: 15px;
+  width: 90%;
+  background-image: url("./Assets/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: left;
+  background-position-x: 10px;
+  text-indent: 10px;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  font-size: 25px;
+  font-family: monospace;
+  font-weight: bolder;
+}
+
+.percentage-input {
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  padding: 15px;
+  width: 90%;
+  background-image: url("./Assets/icon-person.svg");
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: left;
+  background-position-x: 10px;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+  font-size: 25px;
+  font-family: monospace;
+  font-weight: bolder;
+}
+
+.btn-style {
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 30%;
+  text-align: center;
+  margin: 5px;
+  cursor: pointer;
+}
+.button-container {
+  width: 100%;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.result-container {
+  background-color: hsl(183, 100%, 15%);
+  margin-left: 15px;
+  border-radius: 10px;
+  width: 48%;
+}
+
+.label-input-container {
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.bill-input-container {
+  padding-top: 10px;
+}
+
+.percentage-input-container {
+  padding-top: 10px;
+}
+.container {
+  width: 50%;
+}
+
+.tip-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.total-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+
+.tip-amount-container {
+  width: 40%;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.total-amount-container {
+  width: 40%;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.number-amount-container {
+  width: 40%;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.person-styling {
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+}
+
+.tip-styling {
+  font-family: monospace;
+  color: white;
+  font-size: 15px;
+}
+
+.total-styling {
+  font-family: monospace;
+  font-size: 50px;
+  color: rgb(39, 194, 173);
+  margin-top: 5px;
+}
+
+.reset-btn-styling {
+  width: 80%;
+  border: none;
+  background-color: rgb(39, 194, 173);
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 24px;
+  color: hsl(183, 100%, 15%);
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reset-btn-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+  text-align: center;
+}
+
+.highlight {
+  background-color: rgb(39, 194, 173);
+}
+
+::placeholder {
+  color: rgb(39, 194, 173);
+  font-family: monospace;
+  text-align: right;
+  font-size: 25px;
+  margin: auto;
+}
+
+button:hover {
+  background-color: rgb(39, 194, 173);
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="mainStylesheet.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <div class="logo-container">
+      <img src="./Assets/logo.svg" alt="Splitter" />
+    </div>
+    <div class="card-body">
+      <div class="container">
+        <div class="label-input-container">
+          <label for="bill">Bill</label>
+          <div class="bill-input-container">
+            <input
+              placeholder="0"
+              onchange="handleBillChange()"
+              id="bill"
+              class="bill-input"
+              type="number"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="percentage">Select Tip %</label>
+          <div class="button-container">
+            <button id="five" class="btn-style" value="5">
+              <h3>5%</h3>
+            </button>
+
+            <button id="ten" class="btn-style" value="10">
+              <h3>10%</h3>
+            </button>
+
+            <button id="fifthteen" class="btn-style" value="15">
+              <h3>15%</h3>
+            </button>
+
+            <button id="twentyFive" class="btn-style" value="25">
+              <h3>25%</h3>
+            </button>
+
+            <button id="fifty" class="btn-style" value="50">
+              <h3>50%</h3>
+            </button>
+
+            <button id="custom" class="btn-style">
+              <h3>Custom</h3>
+            </button>
+          </div>
+        </div>
+        <div class="label-input-container">
+          <label for="numberOfPeople">Number of People</label>
+          <div class="percentage-input-container">
+            <input
+              required
+              placeholder="0"
+              onchange="handlePeopleChange()"
+              class="percentage-input"
+              id="numberOfPeople"
+              type="number"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="result-container">
+        <div class="tip-container">
+          <div class="tip-amount-container">
+            <h2 class="tip-styling">Tip Amount</h2>
+            <h2 class="person-styling">/ Person</h2>
+          </div>
+          <div class="number-amount-container">
+            <h2 id="tip-amount" class="total-styling"></h2>
+          </div>
+        </div>
+        <div class="total-container">
+          <div class="total-amount-container">
+            <h2 class="tip-styling">Total</h2>
+            <h2 class="person-styling">/ Person</h2>
+          </div>
+          <div class="number-amount-container">
+            <h2 id="total-amount" class="total-styling"></h2>
+          </div>
+        </div>
+        <div class="reset-btn-container">
+          <button
+            onclick="handleReset()"
+            type="button"
+            class="reset-btn-styling"
+          >
+            RESET
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var num1 = 0.0;
+      var total = `$${num1}`;
+      document.getElementById("total-amount").innerHTML = total;
+
+      var num2 = 0.0;
+      var tipAmount = `$${num2}`;
+      document.getElementById("tip-amount").innerHTML = tipAmount;
+
+      var totalInput = 0;
+      var percentageSelected = 0;
+      var peopleInput = 0;
+
+      var buttons = document.querySelectorAll("button");
+
+      for (button in buttons) {
+        buttons[button].onclick = function () {
+          buttons.forEach(function (btn) {
+            btn.classList.remove("highlight");
+          });
+          this.classList.add("highlight");
+        };
+      }
+
+      document.getElementById("five").addEventListener("click", () => {
+        percentageSelected = 0.05;
+      });
+
+      document.getElementById("ten").addEventListener("click", () => {
+        percentageSelected = 0.1;
+      });
+
+      document.getElementById("fifthteen").addEventListener("click", () => {
+        percentageSelected = 0.15;
+      });
+
+      document.getElementById("twentyFive").addEventListener("click", () => {
+        percentageSelected = 0.25;
+      });
+
+      document.getElementById("fifty").addEventListener("click", () => {
+        percentageSelected = 0.5;
+      });
+
+      function handleBillChange() {
+        totalInput = Number(document.querySelector("#bill").value);
+      }
+
+      function handlePeopleChange() {
+        peopleInput = Number(document.querySelector("#numberOfPeople").value);
+        if (percentageSelected > 0.01) {
+          compute(totalInput, peopleInput, percentageSelected);
+        }
+      }
+
+      function compute(bill, parties, tipPercentage) {
+        tip = bill * tipPercentage;
+        perPerson = tip / parties;
+
+        document.getElementById("tip-amount").innerHTML = `$${Number(
+          perPerson.toFixed(2)
+        )}`;
+
+        document.getElementById("total-amount").innerHTML = `$${Number(
+          tip.toFixed(2)
+        )}`;
+      }
+
+      function handleReset() {
+        document.getElementById("total-amount").innerHTML = total;
+        document.getElementById("tip-amount").innerHTML = tipAmount;
+        inputs = document.querySelectorAll("input");
+        inputs.forEach((input) => {
+          input.value = "";
+        });
+      }
+    </script>
+  </body>
+</html>
