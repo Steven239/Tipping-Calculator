@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Assets/Screen%20Shot%202022-09-23%20at%206.36.55%20PM.png)
+![](./Assets/TippingCalImg.pdf)
 
 ### Links
 
